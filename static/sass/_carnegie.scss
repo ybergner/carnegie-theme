@@ -6,35 +6,28 @@
 ****************************************************************************************************/
 
 //-----------------
-//  Color variables (from Stanford palette unless noted)
+//  Color variables
 //-----------------
 
-//Cardinal Color Variables
-$cardinal-red: #8C1515;
-$dark-red: #820000; //Link Color
-$cardinal-light: #c83737; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
-$cardinal-bg: #e9afaf; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
-
-//Beige Color Variables
-$beige: #9d9573;
-$beige-60: lighten($beige, 18.5%); //Main Border/HR Color
-$beige-25: lighten($beige, 25%); 
-
-//Sandstone Color Variables
-$sandstone: #ddcf99;
-$sandstone-50: lighten($sandstone, 9%);
-$sandstone-25: lighten($sandstone, 20%); //Important Heading BG Color 
+//CLASlite Color Variables
+$claslite-orange: #de6d40;
+$claslite-orange-dark: #7e3518; //Link Color
+$claslite-orange-light: #ee9470; //Header BG Color
+$claslite-orange-very-light: #f9b297; //Content BG Color
 
 //Gray Color Variables
-$gray: #3f3c30; //Main Text Color
+$gray: #4d4d4d;
 $gray-75: lighten($gray, 18.25%); //Lighter Text Color
 
-$gray-3: #e9e6df; //Block/Course BG Color
-$gray-2: #f2f1eb;
-$gray-1: #fbfbf9; //Main BG Color
+$gray-light: #999999;
+$gray-light-50: lighten($gray-light, 9%);
+$gray-light-25: lighten($gray-light, 20%);
 
-$black: #2e2d29;
-$black-80: #585754;
+$gray-3: #e9e6df; //Block/Course BG Color
+$gray-1: #f9f9f9; //Main BG Color
+
+$black: #3c3c3c;
+$black-80: lighten($black, 9%);
 
 
 
@@ -50,8 +43,6 @@ $theme-serif-font: 'Crimson Text';
 $serif: $theme-serif-font, $serif;
 
 
-
-
 //-----------------
 //  Theme Element Assignments
 //-----------------
@@ -61,31 +52,36 @@ $container-bg: $gray-1;
 $login-register-bg: $gray-1;
 $content-wrapper-bg: $gray-1;
 $header-image: none;
-$header-bg: transparentize(lighten($sandstone, 18.5%), .25);
+$header-bg: transparentize(lighten($white, 18.5%), .25);
 $courseware-header-image: none;
-$courseware-header-bg: transparentize(lighten($sandstone, 18.5%), .25);
-$footer-bg: $sandstone-25;
-$courseware-footer-border: 1px solid $beige-60;
+$courseware-header-bg: transparentize($white, .25);
+
+$footer-bg: $gray;
+$footer-text-color: $gray-1;
+$footer-link-color: $claslite-orange-light;
+$footer-link-hover: $claslite-orange-light;
+
+$courseware-footer-border: 1px solid $black;
 $courseware-footer-shadow: box-shadow(2px 1px 0 rgba(0, 0, 0, .1));
 $courseware-footer-margin: 50px;
 
-$faded-hr-image-1: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-2: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-3: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-4: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-5: linear-gradient($beige-60 0%, $beige-60);
-$faded-hr-image-6: linear-gradient($beige-60 0%, $beige-60);
+$faded-hr-image-1: linear-gradient($black 0%, $black);
+$faded-hr-image-2: linear-gradient($black 0%, $black);
+$faded-hr-image-3: linear-gradient($black 0%, $black);
+$faded-hr-image-4: linear-gradient($black 0%, $black);
+$faded-hr-image-5: linear-gradient($black 0%, $black);
+$faded-hr-image-6: linear-gradient($black 0%, $black);
 
 $base-font-color: $black;
 $lighter-base-font-color: $black-80;
 $very-light-text: $gray-1;
 
-$link-color: $dark-red;
-$link-color-d1: $dark-red;
-$link-hover: $cardinal-light;
-$site-status-color: $cardinal-bg;
+$link-color: $claslite-orange-dark;
+$link-color-d1: $claslite-orange-dark;
+$link-hover: $claslite-orange-light;
+$site-status-color: $claslite-orange-very-light;
 
-$button-color: $cardinal-red;
+$button-color: $claslite-orange;
 $button-archive-color: $gray-3;
 
 $shadow-color: $gray;
@@ -96,19 +92,19 @@ $button-bg-color: $gray-3;
 $button-bg-hover-color: $gray-1;
 
 // actions - primary
-$action-primary-bg: $cardinal-red;
-$action-primary-fg: $gray-2;
+$action-primary-bg: $claslite-orange;
+$action-primary-fg: $gray-1;
 $action-primary-shadow: none;
 
 // focused - hover/active pseudo states
-$action-primary-focused-bg: $dark-red;
+$action-primary-focused-bg: $claslite-orange-dark;
 $action-primary-focused-fg: $gray-1;
 
 // current or active navigation item
-$action-primary-active-bg: $dark-red;
+$action-primary-active-bg: $claslite-orange-dark;
 $action-primary-active-fg: $gray-1;
 $action-primary-active-shadow: none;
-$action-primary-active-focused-fg: $gray-2;
+$action-primary-active-focused-fg: $gray-1;
 $action-primary-active-focused-shadow: none;
 
 // disabled
@@ -118,16 +114,16 @@ $action-prmary-disabled-fg: $gray-1;
 
 
 // actions - secondary
-$action-secondary-bg: $sandstone;
+$action-secondary-bg: $gray-light;
 $action-secondary-fg: $gray;
 $action-secondary-shadow: none;
 
 // focused - hover/active pseudo states
-$action-secondary-focused-bg: $sandstone-50;
+$action-secondary-focused-bg: $gray-light-50;
 $action-secondary-focused-fg: $gray;
 
 // current or active navigation item
-$action-secondary-active-bg: $sandstone-50;
+$action-secondary-active-bg: $gray-light-50;
 $action-secondary-active-fg: $gray;
 $action-secondary-active-shadow: none;
 $action-secondary-active-focused-fg: $gray-75;
@@ -139,17 +135,17 @@ $action-secondary-disabled-fg: $gray;
 
 //
 
-$border-color-1: $beige-60;
-$border-color-2: $beige-60;
-$border-color-3: $beige-60;
-$outer-border-color: $beige-60;
+$border-color-1: $black;
+$border-color-2: $black;
+$border-color-3: $black;
+$outer-border-color: $black;
 
 $sidebar-color: $gray-1;
 
 $dashboard-profile-header-image: none;
-$dashboard-profile-header-color: $sandstone-25;
+$dashboard-profile-header-color: $gray-light-50;
 $dashboard-profile-color: $gray-3;
-$dot-color: $beige-60;
+$dot-color: $black;
 
 $course-bg-color: $gray-3;
 $course-bg-image: none;
@@ -160,7 +156,7 @@ $course-header-bg: transparentize($gray-1, .1);
 
 $sidebar-chapter-bg-top: transparentize($gray-1, .3);
 $sidebar-chapter-bg-bottom: transparentize($gray-1, .9);
-$sidebar-chapter-bg: $gray-2;
+$sidebar-chapter-bg: $gray-1;
 $sidebar-active-image: $gray-3;
 
 $form-bg-color: $gray-1;
@@ -175,12 +171,12 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: '../themes/stanford/images/stanford-pano.jpg';
+$homepage-bg-image: '../themes/carnegie/images/forest_bg.jpg';
 
 $login-banner-image: none;
 $register-banner-image: none;
 
-$video-thumb-url: '../themes/stanford/images/stanford-video-thumb.png';
+$video-thumb-url: '../themes/carnegie/images/carnegie_thumb.png';
 
 //-----------------
 //  Mixin Styles
