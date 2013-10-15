@@ -1,18 +1,21 @@
 ## mako
 <%! from django.core.urlresolvers import reverse %>
 <%namespace name='static' file='/static_content.html'/>
+<%! from datetime import datetime %>
+<%! from pytz import UTC %>
 
 <div class="wrapper-footer">
   <footer>
     <div class="colophon" style="width: 80%; margin: 0;">
-      <div class="footer-info-image" style="height: 100px; float: left;">
-        <img src="${static.url('themes/carnegie/images/carnegie_logo_small.png')}" alt="Carnegie Institution logo" width="125" style="display: block; float: left; padding-right: 10px; margin-right: 15px; border-right: 1px solid #c4c5c7"/>
+      <div class="footer-info-image" style="height: 110px; float: left;">
+        <img src="${static.url('themes/carnegie/images/carnegie_thumb.png')}" alt="Carnegie Institution logo" width="191" style="display: block; float: left; padding-right: 10px; margin-right: 15px; border-right: 1px solid #c4c5c7"/>
       </div>
-      <p class="footer-info-address" style="display: block; width: 275px; float: left; margin-bottom: 20px;">Carnegie Institution for Science <br /> 260 Panama Street <br /> Stanford, CA 94305, USA</p>
-      <p class="footer-info-contact" style="margin-top: 0; display: block; width: 250px; float: left;">Telephone: (+1) 650-462-1047 <br /> Fax: (+1) 650-462-5968 <br /> E-Mail: <a href="mailto:claslite_coursesupport@carnegiescience.edu">Click to Email</a></p></p>
+      <p class="footer-info-address" style="display: block; width: 275px; float: left; margin-bottom: 20px; margin-top: 12px;">Carnegie Institution for Science <br /> 260 Panama Street <br /> Stanford, CA 94305, USA</p>
+      <p class="footer-info-contact" style="margin-top: 12px; display: block; width: 250px; float: left;">Telephone: (+1) 650-462-1047 <br /> Fax: (+1) 650-462-5968 <br /> E-Mail: <a href="mailto:claslite_coursesupport@carnegiescience.edu">Click to Email</a></p></p>
     </div>
     <div class="references" style="width: 20%;">
-      <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
+      <div style="margin-top: 12px;">Built on <a href="http://code.edx.org">OpenEdX</a>.</div>
     </div>
+    <div style="float: right; clear: both">Copyright &copy; ${datetime.now(UTC).year} Carnegie Institution for Science</div>
   </footer>
 </div>
