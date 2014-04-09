@@ -175,7 +175,7 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: '../themes/carnegie/images/forest_bg.jpg';
+$homepage-bg-image: url('../themes/carnegie/images/forest_bg.jpg');
 
 $login-banner-image: none;
 $register-banner-image: none;
